@@ -64,3 +64,13 @@ sudo systemctl enable --now docker
 
 # Enable Docker usage without sudo
 sudo gpasswd --add "${USER}" docker
+
+# Configure Git
+git config --global user.name 'Hugo Marotta'
+git config --global user.email 'humarotta@proton.me'
+
+git config --global user.signingkey 'humarotta@proton.me'
+git config --global commit.gpgsign true
+
+git config --global core.editor 'code --wait'
+git config --global init.defaultBranch 'main'
