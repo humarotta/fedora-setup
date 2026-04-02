@@ -17,7 +17,7 @@ fi
 
 # Create temporary directory
 TEMP_DIR="$(mktemp -d)"
-trap 'rm -rf "${TEMP_DIR}"' EXIT
+trap 'sudo rm -rf "${TEMP_DIR}"' EXIT
 
 # Disable sudo timeout
 echo 'Defaults timestamp_timeout = -1' | sudo tee /etc/sudoers.d/timeout >/dev/null
