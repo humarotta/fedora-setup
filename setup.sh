@@ -45,3 +45,7 @@ sudo dnf install -y code
 
 # Install Cursor
 sudo dnf install -y https://api2.cursor.sh/updates/download/golden/linux-x64-rpm/cursor/latest
+
+# Install GitHub CLI
+sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install -y gh
