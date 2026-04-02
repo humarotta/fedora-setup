@@ -42,3 +42,6 @@ gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 EOF
 
 sudo dnf install -y code
+
+# Install Cursor
+sudo dnf install -y https://api2.cursor.sh/updates/download/golden/linux-x64-rpm/cursor/latest
