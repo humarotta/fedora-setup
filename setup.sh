@@ -196,5 +196,8 @@ dconf write /org/gnome/desktop/interface/gtk-theme "'adw-gtk3-dark'"
 # Disable middle click paste
 dconf write /org/gnome/desktop/interface/gtk-enable-primary-paste false
 
+# Enable maximize and minimize buttons
+dconf write /org/gnome/desktop/wm/preferences/button-layout "'appmenu:minimize,maximize,close'"
+
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
