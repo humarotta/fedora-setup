@@ -190,5 +190,8 @@ dconf write /org/gnome/desktop/interface/monospace-font-name "'Fira Code 10'"
 # Install GTK3 port of Libadwaita
 sudo dnf install -y adw-gtk3-theme
 
+# Set GTK theme
+dconf write /org/gnome/desktop/interface/gtk-theme "'adw-gtk3-dark'"
+
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
