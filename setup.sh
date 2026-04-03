@@ -199,5 +199,8 @@ dconf write /org/gnome/desktop/interface/gtk-enable-primary-paste false
 # Enable maximize and minimize buttons
 dconf write /org/gnome/desktop/wm/preferences/button-layout "'appmenu:minimize,maximize,close'"
 
+# Detach modal dialogs
+dconf write /org/gnome/mutter/attach-modal-dialogs false
+
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
