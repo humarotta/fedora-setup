@@ -118,6 +118,14 @@ sudo usermod --shell "$(which fish)" "${USER}"
 # Install Fisher
 fish -c 'curl -fsSL https://git.io/fisher | source && fisher install jorgebucaran/fisher'
 
+# Install some Fish plugins
+fish -c '
+fisher install \
+  jethrokuan/z \
+  jorgebucaran/autopair.fish \
+  nickeb96/puffer-fish
+'
+
 # Install Flatpak packages
 FLATPAK_PACKAGES=(
   com.belmoussaoui.Decoder
