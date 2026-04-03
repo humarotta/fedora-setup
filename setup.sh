@@ -187,5 +187,8 @@ dconf write /org/gnome/desktop/interface/font-name "'Fira Sans 9'"
 dconf write /org/gnome/desktop/interface/document-font-name "'Fira Sans 9'"
 dconf write /org/gnome/desktop/interface/monospace-font-name "'Fira Code 10'"
 
+# Install GTK3 port of Libadwaita
+sudo dnf install -y adw-gtk3-theme
+
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
