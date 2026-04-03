@@ -181,3 +181,6 @@ for font in "${FONTS[@]}"; do
 done
 
 sudo fc-cache -f
+
+# Speed ​​up animations
+echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
