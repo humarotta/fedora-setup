@@ -22,6 +22,36 @@ trap 'sudo rm -rf "${TEMP_DIR}"' EXIT
 # Disable sudo timeout
 echo 'Defaults timestamp_timeout = -1' | sudo tee /etc/sudoers.d/timeout >/dev/null
 
+# Remove unwanted packages
+UNWANTED_PACKAGES=(
+  baobab
+  firefox*
+  gnome-abrt
+  gnome-calendar
+  gnome-characters
+  gnome-clocks
+  gnome-color-manager
+  gnome-connections
+  gnome-contacts
+  gnome-font-viewer
+  gnome-logs
+  gnome-maps
+  gnome-system-monitor
+  gnome-tour
+  gnome-weather
+  ibus-anthy*
+  ibus-hangul
+  ibus-libpinyin
+  ibus-m17n
+  ibus-typing-booster
+  libreoffice*
+  simple-scan
+  snapshot
+  yelp*
+)
+
+sudo dnf remove -y "${UNWANTED_PACKAGES[@]}"
+
 # Install RPM Fusion repositories
 sudo dnf install -y \
   "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-${VERSION_ID}.noarch.rpm" \
