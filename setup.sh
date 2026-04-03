@@ -109,6 +109,18 @@ git config --global commit.gpgsign true
 git config --global core.editor 'code --wait'
 git config --global init.defaultBranch 'main'
 
+# Install Flatpak packages
+FLATPAK_PACKAGES=(
+  com.belmoussaoui.Decoder
+  com.mattjakeman.ExtensionManager
+  com.rafaelmardojai.Blanket
+  net.trowell.typesetter
+  org.chromium.Chromium
+  org.mozilla.firefox
+)
+
+sudo flatpak install flathub -y "${FLATPAK_PACKAGES[@]}"
+
 # Install fonts from Font Squirrel
 FONTS_DIR='/usr/share/fonts'
 FONTS=(
