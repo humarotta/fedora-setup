@@ -139,6 +139,21 @@ end
 funcsave fish_user_key_bindings
 '
 
+# Add Fish functions to create and enter directories
+fish -c '
+function mkcd
+  mkdir -p $argv[1] && cd $argv[1]
+end
+
+funcsave mkcd
+
+function mkcdtmp
+  cd (mktemp -d)
+end
+
+funcsave mkcdtmp
+'
+
 # Install Flatpak packages
 FLATPAK_PACKAGES=(
   com.belmoussaoui.Decoder
