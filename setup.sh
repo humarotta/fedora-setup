@@ -78,3 +78,17 @@ git config --global commit.gpgsign true
 
 git config --global core.editor 'code --wait'
 git config --global init.defaultBranch 'main'
+
+# Install fonts from Font Squirrel
+FONTS_DIR='/usr/share/fonts'
+FONTS=(
+  fira-code
+  fira-sans
+)
+
+for font in "${FONTS[@]}"; do
+  curl -f "https://www.fontsquirrel.com/fonts/download/${font}" -o "${TEMP_DIR}/${font}.zip" && \
+  sudo unzip -o "${TEMP_DIR}/${font}.zip" -d "${FONTS_DIR}/${font}"
+done
+
+sudo fc-cache -f
