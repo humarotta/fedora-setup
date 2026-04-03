@@ -129,6 +129,16 @@ fisher install \
   nickeb96/puffer-fish
 '
 
+# Add Fish key bindings to delete words
+fish -c '
+function fish_user_key_bindings
+  bind ctrl-h backward-kill-word
+  bind ctrl-delete kill-word
+end
+
+funcsave fish_user_key_bindings
+'
+
 # Install Flatpak packages
 FLATPAK_PACKAGES=(
   com.belmoussaoui.Decoder
