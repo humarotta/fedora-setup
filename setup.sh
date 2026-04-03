@@ -115,6 +115,9 @@ sudo dnf install -y fish
 # Set Fish as default shell
 sudo usermod --shell "$(which fish)" "${USER}"
 
+# Install Fisher
+fish -c 'curl -fsSL https://git.io/fisher | source && fisher install jorgebucaran/fisher'
+
 # Install Flatpak packages
 FLATPAK_PACKAGES=(
   com.belmoussaoui.Decoder
