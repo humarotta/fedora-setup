@@ -89,7 +89,7 @@ FONTS=(
 for font in "${FONTS[@]}"; do
   curl -f "https://www.fontsquirrel.com/fonts/download/${font}" -o "${TEMP_DIR}/${font}.zip" && \
   sudo unzip -o "${TEMP_DIR}/${font}.zip" -d "${FONTS_DIR}/${font}"
-  
+
   sleep 1
 done
 
