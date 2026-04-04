@@ -217,5 +217,8 @@ dconf write /org/gnome/desktop/interface/clock-show-weekday true
 # Show week date in calendar
 dconf write /org/gnome/desktop/calendar/show-weekdate true
 
+# Use list view as default folder viewer
+dconf write /org/gnome/nautilus/preferences/default-folder-viewer "'list-view'"
+
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
