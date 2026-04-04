@@ -202,5 +202,8 @@ dconf write /org/gnome/desktop/wm/preferences/button-layout "'appmenu:minimize,m
 # Detach modal dialogs
 dconf write /org/gnome/mutter/attach-modal-dialogs false
 
+# Limit app switcher to current workspace
+dconf write /org/gnome/shell/app-switcher/current-workspace-only true
+
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
