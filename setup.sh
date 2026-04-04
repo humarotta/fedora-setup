@@ -211,5 +211,8 @@ dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
 # Disable mouse acceleration
 dconf write /org/gnome/desktop/peripherals/mouse/accel-profile "'flat'"
 
+# Show weekday in clock
+dconf write /org/gnome/desktop/interface/clock-show-weekday true
+
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
