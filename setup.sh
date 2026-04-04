@@ -208,5 +208,8 @@ dconf write /org/gnome/shell/app-switcher/current-workspace-only true
 # Use dark color scheme
 dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
 
+# Disable mouse acceleration
+dconf write /org/gnome/desktop/peripherals/mouse/accel-profile "'flat'"
+
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
