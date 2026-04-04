@@ -205,5 +205,8 @@ dconf write /org/gnome/mutter/attach-modal-dialogs false
 # Limit app switcher to current workspace
 dconf write /org/gnome/shell/app-switcher/current-workspace-only true
 
+# Use dark color scheme
+dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
+
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
