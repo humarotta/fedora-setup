@@ -229,5 +229,8 @@ dconf write /org/gtk/gtk4/settings/file-chooser/sort-directories-first true
 # Show "Delete permanently" option
 dconf write /org/gnome/nautilus/preferences/show-delete-permanently true
 
+# Use I-Beam cursor shape
+dconf write /org/gnome/Ptyxis/cursor-shape "'ibeam'"
+
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
