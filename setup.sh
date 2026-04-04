@@ -234,3 +234,6 @@ dconf write /org/gnome/Ptyxis/cursor-shape "'ibeam'"
 
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
+
+# Update the system one last time
+sudo dnf update -y --refresh
