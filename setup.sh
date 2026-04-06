@@ -84,6 +84,9 @@ sudo dnf install -y https://api2.cursor.sh/updates/download/golden/linux-x64-rpm
 sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
 sudo dnf install -y gh
 
+# Install Nix
+curl -fsSL https://install.determinate.systems/nix | sudo bash -s -- install --no-confirm
+
 # Install Docker
 sudo dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
 sudo dnf install -y \
