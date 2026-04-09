@@ -188,55 +188,8 @@ done
 
 sudo fc-cache -f
 
-# Set interface fonts
-dconf write /org/gnome/desktop/interface/font-name "'Fira Sans 9'"
-dconf write /org/gnome/desktop/interface/document-font-name "'Fira Sans 9'"
-dconf write /org/gnome/desktop/interface/monospace-font-name "'Fira Code 10'"
-
 # Install GTK3 port of Libadwaita
 sudo dnf install -y adw-gtk3-theme
-
-# Set GTK theme
-dconf write /org/gnome/desktop/interface/gtk-theme "'adw-gtk3-dark'"
-
-# Disable middle click paste
-dconf write /org/gnome/desktop/interface/gtk-enable-primary-paste false
-
-# Enable maximize and minimize buttons
-dconf write /org/gnome/desktop/wm/preferences/button-layout "'appmenu:minimize,maximize,close'"
-
-# Detach modal dialogs
-dconf write /org/gnome/mutter/attach-modal-dialogs false
-
-# Limit app switcher to current workspace
-dconf write /org/gnome/shell/app-switcher/current-workspace-only true
-
-# Use dark color scheme
-dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
-
-# Disable mouse acceleration
-dconf write /org/gnome/desktop/peripherals/mouse/accel-profile "'flat'"
-
-# Show weekday in clock
-dconf write /org/gnome/desktop/interface/clock-show-weekday true
-
-# Show week date in calendar
-dconf write /org/gnome/desktop/calendar/show-weekdate true
-
-# Use list view as default folder viewer
-dconf write /org/gnome/nautilus/preferences/default-folder-viewer "'list-view'"
-
-# Use small zoom level for list view
-dconf write /org/gnome/nautilus/list-view/default-zoom-level "'small'"
-
-# Sort directories first
-dconf write /org/gtk/gtk4/settings/file-chooser/sort-directories-first true
-
-# Show "Delete permanently" option
-dconf write /org/gnome/nautilus/preferences/show-delete-permanently true
-
-# Use I-Beam cursor shape
-dconf write /org/gnome/Ptyxis/cursor-shape "'ibeam'"
 
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
