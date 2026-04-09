@@ -172,6 +172,9 @@ FLATPAK_PACKAGES=(
 
 sudo flatpak install flathub -y "${FLATPAK_PACKAGES[@]}"
 
+# Install Gnome Tweaks
+sudo dnf install -y gnome-tweaks
+
 # Install fonts from Font Squirrel
 FONTS_DIR='/usr/share/fonts'
 FONTS=(
