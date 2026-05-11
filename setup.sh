@@ -26,7 +26,6 @@ echo 'Defaults timestamp_timeout = -1' | sudo tee /etc/sudoers.d/timeout >/dev/n
 UNWANTED_PACKAGES=(
   baobab
   firefox*
-  gnome-abrt
   gnome-calendar
   gnome-characters
   gnome-clocks
