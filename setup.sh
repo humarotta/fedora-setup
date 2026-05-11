@@ -6,7 +6,7 @@ set -eo pipefail
 source /etc/os-release
 
 # Check OS compatibility
-MINIMUM_VERSION='43'
+MINIMUM_VERSION='44'
 
 if [[ "${ID}" != 'fedora' || \
       "${VARIANT_ID}" != 'workstation' || \
