@@ -181,6 +181,9 @@ abbr -a gips "git push -u origin (git symbolic-ref --short HEAD)"
 abbr > $__fish_config_dir/conf.d/abbreviations.fish
 '
 
+# Install Proton Pass
+sudo dnf install -y https://proton.me/download/pass/linux/proton-pass-1.36.1-1.x86_64.rpm
+
 # Install Flatpak packages
 FLATPAK_PACKAGES=(
   com.belmoussaoui.Decoder
