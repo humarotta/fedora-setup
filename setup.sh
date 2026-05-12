@@ -167,6 +167,17 @@ abbr -a dbi "devbox install"
 abbr -a dbr "devbox run"
 abbr -a dbs "devbox shell"
 
+abbr -a gi "git"
+abbr -a gia "git add"
+abbr -a gis "git status -sb"
+abbr -a gil "git log --graph --decorate --all"
+abbr -a gilo "git log --oneline --graph --decorate --all"
+abbr -a gic "git commit"
+abbr -a gicm "git commit -m"
+abbr -a gir "git reset"
+abbr -a girh "git reset --hard && git clean -fd"
+abbr -a gips "git push -u origin (git symbolic-ref --short HEAD)"
+
 abbr > $__fish_config_dir/conf.d/abbreviations.fish
 '
 
