@@ -161,11 +161,11 @@ funcsave mkcdtmp
 
 # Add some Fish abbreviations
 fish -c '
-abbr -a db devbox
-abbr -a dba devbox add
-abbr -a dbi devbox install
-abbr -a dbr devbox run
-abbr -a dbs devbox shell
+abbr -a db "devbox"
+abbr -a dba "devbox add"
+abbr -a dbi "devbox install"
+abbr -a dbr "devbox run"
+abbr -a dbs "devbox shell"
 
 abbr > $__fish_config_dir/conf.d/abbreviations.fish
 '
