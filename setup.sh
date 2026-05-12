@@ -189,10 +189,7 @@ sudo dnf install -y https://proton.me/download/authenticator/linux/ProtonAuthent
 
 # Install Flatpak packages
 FLATPAK_PACKAGES=(
-  com.belmoussaoui.Decoder
-  com.mattjakeman.ExtensionManager
-  com.rafaelmardojai.Blanket
-  net.trowell.typesetter
+  md.obsidian.Obsidian
   org.chromium.Chromium
   org.mozilla.firefox
 )
