@@ -185,7 +185,7 @@ abbr > $__fish_config_dir/conf.d/abbreviations.fish
 '
 
 # Install Proton Pass
-sudo dnf install -y https://proton.me/download/pass/linux/proton-pass-1.36.1-1.x86_64.rpm
+sudo dnf install -y https://proton.me/download/PassDesktop/linux/x64/ProtonPass.rpm
 
 # Install Proton Authenticator
 sudo dnf install -y https://proton.me/download/authenticator/linux/ProtonAuthenticator-1.1.5-1.x86_64.rpm
