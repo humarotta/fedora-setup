@@ -38,6 +38,11 @@ UNWANTED_PACKAGES=(
   gnome-font-viewer
   gnome-logs
   gnome-maps
+  gnome-shell-extension-apps-menu
+  gnome-shell-extension-background-logo
+  gnome-shell-extension-launch-new-instance
+  gnome-shell-extension-places-menu
+  gnome-shell-extension-window-list
   gnome-system-monitor
   gnome-tour
   gnome-weather
