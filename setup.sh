@@ -17,10 +17,13 @@ fi
 
 # Create temporary directory
 TEMP_DIR="$(mktemp -d)"
-trap 'sudo rm -rf "${TEMP_DIR}"' EXIT
 
 # Disable sudo timeout
-echo 'Defaults timestamp_timeout = -1' | sudo tee /etc/sudoers.d/timeout >/dev/null
+TIMEOUT_FILE='/etc/sudoers.d/timeout'
+echo 'Defaults timestamp_timeout = -1' | sudo tee "${TIMEOUT_FILE}" >/dev/null
+
+# Clean up on script exit
+trap 'sudo rm -rf "${TEMP_DIR}" "${TIMEOUT_FILE}"' EXIT
 
 # Remove unwanted packages
 UNWANTED_PACKAGES=(
@@ -223,6 +226,3 @@ echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
 
 # Update the system one last time
 sudo dnf update -y --refresh
-
-# Restore default sudo timeout
-sudo rm -f /etc/sudoers.d/timeout
