@@ -227,7 +227,7 @@ sudo fc-cache -f
 sudo dnf install -y adw-gtk3-theme
 
 # Speed ​​up animations
-echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee /etc/environment >/dev/null
+echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee -a /etc/environment >/dev/null
 
 # Update the system one last time
 sudo dnf update -y --refresh
