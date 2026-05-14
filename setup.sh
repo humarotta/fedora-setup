@@ -152,43 +152,6 @@ end
 funcsave fish_user_key_bindings
 '
 
-# Add Fish functions to create and enter directories
-fish -c '
-function mkcd
-  mkdir -p $argv[1] && cd $argv[1]
-end
-
-funcsave mkcd
-
-function mkcdtmp
-  cd (mktemp -d)
-end
-
-funcsave mkcdtmp
-'
-
-# Add some Fish abbreviations
-fish -c '
-abbr -a db "devbox"
-abbr -a dba "devbox add"
-abbr -a dbi "devbox install"
-abbr -a dbr "devbox run"
-abbr -a dbs "devbox shell"
-
-abbr -a gi "git"
-abbr -a gia "git add"
-abbr -a gis "git status -sb"
-abbr -a gil "git log --graph --decorate --all"
-abbr -a gilo "git log --oneline --graph --decorate --all"
-abbr -a gic "git commit"
-abbr -a gicm "git commit -m"
-abbr -a gir "git reset"
-abbr -a girh "git reset --hard && git clean -fd"
-abbr -a gips "git push -u origin (git symbolic-ref --short HEAD)"
-
-abbr > $__fish_config_dir/conf.d/abbreviations.fish
-'
-
 # Install Proton Pass
 sudo dnf install -y https://proton.me/download/PassDesktop/linux/x64/ProtonPass.rpm
 
