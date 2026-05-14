@@ -170,6 +170,9 @@ sudo flatpak install flathub -y "${FLATPAK_PACKAGES[@]}"
 # Install Gnome Tweaks
 sudo dnf install -y gnome-tweaks
 
+# Install GTK3 port of Libadwaita
+sudo dnf install -y adw-gtk3-theme
+
 # Install fonts from Font Squirrel
 FONTS_DIR='/usr/share/fonts'
 FONTS=(
@@ -185,9 +188,6 @@ for font in "${FONTS[@]}"; do
 done
 
 sudo fc-cache -f
-
-# Install GTK3 port of Libadwaita
-sudo dnf install -y adw-gtk3-theme
 
 # Speed ​​up animations
 echo 'GNOME_SHELL_SLOWDOWN_FACTOR = 0.5' | sudo tee -a /etc/environment >/dev/null
